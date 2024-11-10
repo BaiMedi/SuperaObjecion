@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Objeciones</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        .response, .feedback { margin-top: 20px; }
+        button { padding: 10px 20px; margin: 10px; background-color: #0073e6; color: white; border: none; border-radius: 5px; }
+        .cta { margin-top: 30px; text-align: center; }
+        .cta a { display: inline-block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Simulador de Objeciones</h1>
+<p>Elige una respuesta para abordar la objeción del cliente:</p>
+
+<div class="response">
+    <button onclick="respuestaObjecion('caro')">"Entiendo que sea una inversión. ¿Quieres saber más sobre el retorno?"</button>
+    <button onclick="respuestaObjecion('pensar')">"¿Hay alguna duda que pueda resolver ahora?"</button>
+    <button onclick="respuestaObjecion('competencia')">"¿Te gustaría ver cómo nuestro producto se diferencia?"</button>
+</div>
+
+<div id="feedback" class="feedback"></div>
+
+<div class="cta">
+    <a href="https://klicana.work/YZmsH3" target="_blank">Únete a Lucrachat IA</a>
+</div>
+
+<script>
+function respuestaObjecion(tipo) {
+    let feedback = "";
+    if (tipo === 'caro') {
+        feedback = "Buena respuesta. Mostrar el retorno es clave para justificar el costo.";
+    } else if (tipo === 'pensar') {
+        feedback = "Bien hecho. Abres espacio para aclarar dudas sin presionar.";
+    } else if (tipo === 'competencia') {
+        feedback = "Excelente. Mostrar diferencias te ayuda a ganar ventaja.";
+    }
+    document.getElementById('feedback').innerHTML = feedback;
+}
+</script>
+
+</body>
+</html>
