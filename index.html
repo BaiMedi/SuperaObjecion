@@ -22,6 +22,9 @@
     <button onclick="respuestaObjecion('caro')">"Entiendo que sea una inversión. ¿Quieres saber más sobre el retorno?"</button>
     <button onclick="respuestaObjecion('pensar')">"¿Hay alguna duda que pueda resolver ahora?"</button>
     <button onclick="respuestaObjecion('competencia')">"¿Te gustaría ver cómo nuestro producto se diferencia?"</button>
+    <button onclick="respuestaObjecion('momento')">"Entiendo, ¿quieres asegurar esta oferta para una fecha futura?"</button>
+    <button onclick="respuestaObjecion('retorno')">"Muchos clientes piensan igual y logran un buen retorno. ¿Te muestro algunos?"</button>
+    <button onclick="respuestaObjecion('investigar')">"Si prefieres, puedo darte una comparativa para que evalúes diferencias."</button>
 </div>
 
 <div id="feedback" class="feedback"></div>
@@ -39,6 +42,12 @@ function respuestaObjecion(tipo) {
         feedback = "Bien hecho. Abres espacio para aclarar dudas sin presionar.";
     } else if (tipo === 'competencia') {
         feedback = "Excelente. Mostrar diferencias te ayuda a ganar ventaja.";
+    } else if (tipo === 'momento') {
+        feedback = "Buena estrategia. Ofreces flexibilidad y aseguras el interés futuro.";
+    } else if (tipo === 'retorno') {
+        feedback = "Perfecto. Los testimonios ayudan a dar confianza en el retorno.";
+    } else if (tipo === 'investigar') {
+        feedback = "Gran respuesta. Ofrecer comparativa muestra transparencia y seguridad.";
     }
     document.getElementById('feedback').innerHTML = feedback;
 }
